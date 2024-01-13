@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using TaskManager.Infrastructure.Interfaces;
+using TaskManager.Core.Interfaces.Repositories;
+using TaskManager.Core.Interfaces.Services;
+using TaskManager.Core.Services;
 using TaskManager.Infrastructure.Repositories;
 
 namespace TaskManager.Infrastructure.Extensions
@@ -12,7 +14,7 @@ namespace TaskManager.Infrastructure.Extensions
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             // Services
-
+            services.AddScoped<ITaskService, TaskService>();
 
             return services;
         }
