@@ -11,6 +11,7 @@ namespace TaskManager.Web
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDatabase(builder.Configuration);
+            builder.Services.AddDependencies();
 
             var app = builder.Build();
 
