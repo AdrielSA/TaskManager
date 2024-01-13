@@ -1,3 +1,5 @@
+using TaskManager.Infrastructure.Extensions;
+
 namespace TaskManager.Web
 {
     public class Program
@@ -8,6 +10,7 @@ namespace TaskManager.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDatabase(builder.Configuration);
 
             var app = builder.Build();
 
