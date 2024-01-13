@@ -9,6 +9,7 @@ namespace TaskManager.Web
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddControllersWithViews();
             builder.Services.AddDatabase(builder.Configuration);
             builder.Services.AddDependencies();
@@ -18,7 +19,6 @@ namespace TaskManager.Web
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
@@ -31,7 +31,7 @@ namespace TaskManager.Web
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Task}/{action=Index}/{id?}");
 
             app.Run();
         }

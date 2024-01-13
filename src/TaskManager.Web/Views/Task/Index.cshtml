@@ -1,0 +1,44 @@
+﻿@model List<TaskManager.Web.Models.TaskViewModel>
+
+@{
+    ViewData["Title"] = "Listado de Tareas";
+}
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <h2>Listado de Tareas</h2>
+    </div>
+    <div class="col-md-6 text-end">
+        <a asp-controller="Task" asp-action="Create" class="btn btn-primary">Agregar</a>
+    </div>
+</div>
+<div class="mt-5">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Prioridad</th>
+                <th scope="col">Fecha de Creación</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                <tr>
+                    <th scope="row">@task.Id</th>
+                    <td>@task.Description</td>
+                    <td>@task.Status</td>
+                    <td>@task.Priority</td>
+                    <td>@task.CreationDate</td>
+                    <td>
+                        <a asp-controller="Task" asp-action="Edit" asp-route-id="@task.Id" class="btn btn-secondary">Editar</a>
+                        <button type="button" class="btn btn-danger" onclick="DeleteTask(@task.Id)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

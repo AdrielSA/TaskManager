@@ -10,8 +10,13 @@ namespace TaskManager.Core.Services
         public List<Entities.Task> GetTaskList() =>
             _repository.GetAll().OrderByDescending(x => x.Priority).ToList();
 
+        public Entities.Task GetTaskById(int id) =>
+            _repository.GetById(id) ?? throw new Exception("Tarea no encontrada.");
+
         public void AddTask(Entities.Task task)
         {
+            task.CreationDate = DateTime.Now;
+
             _repository.Add(task);
             _repository.SaveChanges();
         }
@@ -24,7 +29,7 @@ namespace TaskManager.Core.Services
 
         public void DeleteTask(int id)
         {
-            var task = _repository.GetById(id) ?? throw new Exception("Tarea no encontrada.");
+            var task = GetTaskById(id);
 
             _repository.Delete(task);
             _repository.SaveChanges();
