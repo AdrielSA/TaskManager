@@ -5,15 +5,15 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Web", "src\TaskManager.Web\TaskManager.Web.csproj", "{EC3A935B-6291-4F5A-A89E-025F5B1D5E80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Core", "src\TaskManager.Core\TaskManager.Core.csproj", "{D78AE16D-F3DA-4A43-AE0E-66CA6EC44EC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Core", "src\TaskManager.Core\TaskManager.Core.csproj", "{D78AE16D-F3DA-4A43-AE0E-66CA6EC44EC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Infrastructure", "src\TaskManager.Infrastructure\TaskManager.Infrastructure.csproj", "{7129C11D-B7F1-4121-B5B6-AD54E09F6FE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.Infrastructure", "src\TaskManager.Infrastructure\TaskManager.Infrastructure.csproj", "{7129C11D-B7F1-4121-B5B6-AD54E09F6FE6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BDD13D08-7637-44A7-9411-C5AD32403144}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DEA09034-65A3-4BD1-B32E-CAB588516669}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.UnitTest", "test\TaskManager.UnitTest\TaskManager.UnitTest.csproj", "{7200680C-662C-4158-A959-80CE05A61E7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManager.UnitTest", "test\TaskManager.UnitTest\TaskManager.UnitTest.csproj", "{7200680C-662C-4158-A959-80CE05A61E7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
