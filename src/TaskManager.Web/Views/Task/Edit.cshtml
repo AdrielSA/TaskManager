@@ -1,0 +1,23 @@
+﻿@model TaskManager.Web.Models.TaskViewModel
+
+@{
+    ViewData["Title"] = "Editar Tarea";
+}
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <h2>Editar Tarea: @Model.Id</h2>
+    </div>
+    <div class="col-md-6 text-end">
+        <a asp-controller="Task" asp-action="Index" class="btn btn-danger">Cancelar</a>
+    </div>
+</div>
+<div class="mt-5">
+    <form id="SendTaskPut">
+        <input asp-for="Id" type="hidden" />
+        <partial name="_TaskForm" model="Model" />
+        <div class="mt-5">
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+    </form>
+</div>
