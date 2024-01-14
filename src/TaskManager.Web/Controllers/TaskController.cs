@@ -38,14 +38,14 @@ namespace TaskManager.Web.Controllers
             var task = _taskService.GetTaskById(model.Id.GetValueOrDefault());
             task = _mapper.Map(model, task);
             _taskService.UpdateTask(task);
-            return Json(Url.Action(nameof(Index)));
+            return Json($"/Task/{nameof(Index)}");
         }
 
         [HttpDelete]
         public IActionResult Delete(int id)
         {
             _taskService.DeleteTask(id);
-            return Json(Url.Action(nameof(Index)));
+            return Json($"/Task/{nameof(Index)}");
         }
     }
 }

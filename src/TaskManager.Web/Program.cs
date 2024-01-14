@@ -1,4 +1,5 @@
 using TaskManager.Infrastructure.Extensions;
+using TaskManager.Web.Middlewares.Filters;
 
 namespace TaskManager.Web
 {
@@ -10,9 +11,11 @@ namespace TaskManager.Web
 
             // Add services to the container.
             builder.Services.AddAutoMapper(typeof(Program));
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(options 
+                => options.Filters.Add(typeof(ModelStateValidationFilter)));
             builder.Services.AddDatabase(builder.Configuration);
             builder.Services.AddDependencies();
+            builder.Services.AddHttpContextAccessor();
 
             var app = builder.Build();
 

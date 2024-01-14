@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Core", "src\Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.Infrastructure", "src\TaskManager.Infrastructure\TaskManager.Infrastructure.csproj", "{7129C11D-B7F1-4121-B5B6-AD54E09F6FE6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BDD13D08-7637-44A7-9411-C5AD32403144}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DEA09034-65A3-4BD1-B32E-CAB588516669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.UnitTest", "test\TaskManager.UnitTest\TaskManager.UnitTest.csproj", "{7200680C-662C-4158-A959-80CE05A61E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,19 @@ Global
 		{7129C11D-B7F1-4121-B5B6-AD54E09F6FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7129C11D-B7F1-4121-B5B6-AD54E09F6FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7129C11D-B7F1-4121-B5B6-AD54E09F6FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7200680C-662C-4158-A959-80CE05A61E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7200680C-662C-4158-A959-80CE05A61E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7200680C-662C-4158-A959-80CE05A61E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7200680C-662C-4158-A959-80CE05A61E7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC3A935B-6291-4F5A-A89E-025F5B1D5E80} = {BDD13D08-7637-44A7-9411-C5AD32403144}
+		{D78AE16D-F3DA-4A43-AE0E-66CA6EC44EC4} = {BDD13D08-7637-44A7-9411-C5AD32403144}
+		{7129C11D-B7F1-4121-B5B6-AD54E09F6FE6} = {BDD13D08-7637-44A7-9411-C5AD32403144}
+		{7200680C-662C-4158-A959-80CE05A61E7E} = {DEA09034-65A3-4BD1-B32E-CAB588516669}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6921794-C162-4011-A314-96983631CC23}
